@@ -27,7 +27,6 @@ makeCacheMatrix <- function(x = matrix()) {
 cacheSolve <- function(x, ...) {
        
   i <- x$getinverse()
-  print(i)
   if(!is.null(i)) {
     message("getting cached data")
     return(i)
@@ -37,6 +36,8 @@ cacheSolve <- function(x, ...) {
   x$setinverse(i)
   i
 }
+
+# test the functions:
 
 matu = matrix(1:4,2,2)
 x = makeCacheMatrix(matu); x
